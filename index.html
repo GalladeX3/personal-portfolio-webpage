@@ -1,40 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WaldoXP Portfolio</title>
-  <link rel="stylesheet" href="Style.css"/>
+<link rel="canonical" href="https://galladex3.github.io/" />
+<meta property="og:title" content="WaldoXP • Portfolio" />
+<meta property="og:description" content="Nintendo‑inspired web dev projects by WaldoXP." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#e60012" />
+<link rel="icon" href="favicon.ico" />
+<!-- IMPORTANT: filename is lowercase 'style.css' -->
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<a class="skip-link" href="#welcome-section">Skip to content</a>
 
-  <nav id="navbar">
-    <ul>
-      <li><a href="#welcome-section">Welcome</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a id="profile-link" href="https://github.com/YOUR_USERNAME" target="_blank">My GitHub</a></li>
-    </ul>
-  </nav>
 
-  <section id="welcome-section">
-    <h1>Welcome to WaldoXP's Portfolio</h1>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-tile">
-      <a href="https://your-project-link.example.com" target="_blank">
-        <h3>Project Title</h3>
-        <p>Short project description goes here.</p>
-      </a>
-    </div>
-    <div class="project">
-  <h3>Tribute Page</h3>
-  <p>A tribute to Luigi, the underrated Mushroom Kingdom hero.</p>
-  <a href="projects/tribute-page/index.html" target="_blank">View Project</a> |
-  <a href="https://github.com/YourUsername/tribute-page" target="_blank">GitHub</a>
+<header class="site-header">
+<nav id="navbar" aria-label="Primary">
+<div class="container nav-row">
+<a class="brand" href="#welcome-section" aria-label="Go to top">WaldoXP</a>
+<ul class="nav-list">
+<li><a href="#welcome-section">Welcome</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a id="profile-link" href="https://github.com/GalladeX3" target="_blank" rel="noopener noreferrer">My GitHub</a></li>
+</ul>
 </div>
-  </section>
+</nav>
+</header>
 
+
+<main id="main">
+<section id="welcome-section" class="section welcome">
+<div class="container">
+<h1>Welcome to WaldoXP's Portfolio</h1>
+<p class="subtitle">Nintendo‑inspired builds, FCC projects, and more.</p>
+</div>
+</section>
+
+
+<section id="projects" class="section projects">
+<div class="container">
+<h2 class="section-title">My Projects</h2>
+
+
+<div class="projects-grid">
+<!-- FCC requires at least one element with class 'project-tile' that links to a project -->
+<a class="project-tile" href="projects/tribute-page/index.html" target="_blank" rel="noopener noreferrer">
+<h3 class="project-title">Tribute Page</h3>
+<p class="project-desc">A tribute to Luigi, the underrated hero of the Mushroom Kingdom.</p>
+</a>
+
+
+<a class="project-tile" href="https://galladex3.github.io/" target="_blank" rel="noopener noreferrer">
+<h3 class="project-title">Portfolio (GitHub Pages)</h3>
+<p class="project-desc">This site, built for the FCC Personal Portfolio challenge.</p>
+</a>
+
+
+<!-- Add more tiles as you publish projects -->
+</div>
+</div>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>© <span id="year"></span> Waldo Sanabria Vega • WaldoXP</p>
+</div>
+</footer>
+
+
+<script>
+// small enhancement: current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
