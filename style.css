@@ -1,105 +1,88 @@
-/* Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* =====================
+background: var(--surface);
+border-bottom: 1px solid var(--border);
+z-index: 10;
+display: flex;
+align-items: center;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+
+.nav-row { display: flex; align-items: center; justify-content: space-between; }
+.brand {
+font-weight: 800;
+font-size: var(--step-0);
+letter-spacing: .3px;
+color: var(--fg);
+text-decoration: none;
 }
 
-/* Navbar */
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 1rem;
-  z-index: 10;
+
+.nav-list { list-style: none; display: flex; gap: clamp(.75rem, 2.5vw, 2rem); margin: 0; padding: 0; }
+.nav-list a {
+color: var(--fg);
+text-decoration: none;
+font-weight: 600;
+padding: .4rem .6rem;
+border-radius: 10px;
+}
+.nav-list a:hover { background: color-mix(in oklab, var(--fg) 8%, transparent); }
+
+
+@media (max-width: 700px) {
+.nav-row { gap: .75rem; }
+.nav-list { gap: .75rem; }
 }
 
-#navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
 
-#navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Welcome Section */
+/* =====================
+Welcome Section (100vh for FCC)
+===================== */
 #welcome-section {
-  height: 50vh;
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+min-height: 100vh; /* FCC requirement */
+display: grid;
+place-items: center;
+text-align: center;
+padding-block: calc(var(--nav-h) + 2rem) 3rem;
+background: var(--gradient);
+color: #fff;
+}
+#welcome-section h1 { font-size: var(--step-3); line-height: 1.1; margin-bottom: .5rem; }
+#welcome-section .subtitle { font-size: var(--step-1); opacity: .95; }
+
+
+/* =====================
+Projects Grid
+===================== */
+.projects { padding-block: 4rem; background: color-mix(in oklab, var(--bg) 92%, var(--fg)); }
+.section-title { font-size: var(--step-2); margin-bottom: 1.25rem; }
+
+
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 1.25rem;
 }
 
-/* Projects Section */
-#projects {
-  padding: 4rem 2rem;
-  background-color: #f4f4f4;
-}
 
+/* The clickable tile itself is the anchor (meets FCC class requirement) */
 .project-tile {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  transition: transform 0.3s;
+display: block;
+background: var(--surface);
+color: var(--fg);
+text-decoration: none;
+padding: 1rem 1.1rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+.project-tile:hover { transform: translateY(-2px); }
+.project-title { margin: 0 0 .25rem; font-size: var(--step-1); }
+.project-desc { margin: 0; color: var(--muted); font-size: var(--step-0); }
 
-.project-tile:hover {
-  transform: scale(1.03);
-}
 
-.project-tile a {
-  text-decoration: none;
-  color: #333;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #navbar ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #projects {
-    padding: 2rem 1rem;
-  }
-}
-
-.project {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 5px solid #e60012; /* Nintendo red */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.project h3 {
-  margin-top: 0;
-  color: #333;
-}
-.project a {
-  color: #0078d7;
-  text-decoration: none;
-}
-.project a:hover {
-  text-decoration: underline;
-}
+/* =====================
+Footer
+===================== */
+.site-footer { padding: 2rem 0; border-top: 1px solid var(--border); background: var(--surface); color: var(--muted); }
+.site-footer p { margin: 0; }
