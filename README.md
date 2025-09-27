@@ -12,12 +12,4 @@ A clean, personal portfolio site showcasing my projects and Nintendo-inspired de
 ![Homepage – Hero](docs/portfolio-waldoxp.png)
 ![Projects Grid](docs/portfolio-waldoxp-2.png)
 
-```
 
-**Add images from terminal:**
-```bash
-mkdir -p docs
-# move or copy your PNG/JPG files into ./docs
-git add docs/portfolio-waldoxp.png docs/portfolio-waldoxp-2.png
-git commit -m "docs: add portfolio screenshots"
-git push 
