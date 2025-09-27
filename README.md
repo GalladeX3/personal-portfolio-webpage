@@ -1,9 +1,9 @@
 # WaldoXP — Personal Portfolio
 
-A clean, FCC-compliant personal portfolio site showcasing my projects and Nintendo‑inspired design touches.
+A clean, personal portfolio site showcasing my projects and Nintendo‑inspired design touches.
 
 > **Live Demo:** https://GalladeX3.github.io/  
-> **Built For:** freeCodeCamp – _Responsive Web Design: Personal Portfolio Webpage_
+> **Built For:** Responsive Web Design: Personal Portfolio Webpage
 
 ---
 
@@ -32,17 +32,6 @@ If you prefer HTML (for centering), use **valid** tags (don’t forget the closi
   <img src="./docs/portfolio-waldoxp-2.png" alt="Projects grid screenshot" width="880">
 </div>
 ```
-
----
-
-## ✅ FreeCodeCamp User Stories Covered
-
-- A **navbar** with `id="navbar"` that is **fixed** to the top.
-- A **welcome section** with `id="welcome-section"` whose height is at least the **full viewport height**.
-- A **projects** section with `id="projects"` containing one or more elements with the class **`project-tile`** that link to projects.
-- A link to my profile (GitHub) with `id="profile-link"` that **opens in a new tab**.
-- Navigation links that jump to the respective sections on the page.
-- All FCC test suite checks pass for the Personal Portfolio Webpage project.
 
 ---
 
